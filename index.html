@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html data-scroll-container lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
+    <style lang='scss' rel='stylesheet/scss'></style>
+
+    
+    <title>Skoll - Brewing Company</title>
+</head>
+<body>
+
+<nav data-scroll-section onmouseenter="cambioMouse()" onmouseleave="cambioMouseRemove()" class="navbar">
+    <ul class="navbar__ul">
+        <li class="navbar__li">Our Beer</li>
+        <li class="navbar__li">Our History</li>
+    </ul>
+
+    <img src="../assets/img/logo.png">
+
+    <ul class="navbar__ul">
+        <li class="navbar__li">Reviews</li>
+        <li class="navbar__li">Community</li>
+        <li class="navbar__li">Account</li>
+    </ul>
+</nav>
+
+  <div class="cursor">Beer me</div>
+
+<section data-scroll-section class="hero__container">
+    <div class="hero__container-content">
+        <video class="hero__container-video" width="100%" height="100%" autoplay loop muted>
+            <source src="assets/img/background.mp4" type="video/mp4">
+          </video>
+        <h1 class="hero__container-content-title">Ale for the warrior soul</h1>
+        <p class="hero__container-content-p">Beer crafted from the water flows from rain
+             and prehistoric glaciers down the Hlíoarfjall Mountain and through ancient lava fields, 
+             delivering the purest water on Earth, and the perfect foundation for brewing deliciously refreshing craft ales.</p>
+    </div>
+</section>
+
+
+<div id="ourbeer" data-scroll-section onmouseenter="cambioMouse()" onmouseleave="cambioMouseRemove()" class="ourbeers__container">
+
+    <div class="ourbeers__container-box blonde">
+            <div class="ourbeers__content">
+                <h2 class="ourbeers__content-title big">Blonde Ale</h2>
+                <p class="ourbeers__content-subtitle nohover">Asgard Ale Horn</p>
+                <p class="ourbeers__content-description nohover">Classic beer, brewed in the Old-school
+                     tradition of craftsmanship. Proven brewing methods make it a refreshing premium 
+                     beer with a refined finish.</p>
+                <a class="ourbeers__content-button" href="#">Details</a>
+            </div>
+
+            <div class="ourbeers__content-img ">
+                <img src="assets/img/blonde.png" alt="">
+            </div>
+    </div>
+
+    <div class="ourbeers__container-box red">
+        <div class="ourbeers__content">
+            <h2 class="ourbeers__content-title big">Red Ale</h2>
+            <p class="ourbeers__content-subtitle nohover">Blood Moon</p>
+            <p class="ourbeers__content-description nohover">Tasty beer with more filling and a darker amber than 
+                the traditional lager. The carefully chosen malt balances sweetness and a hint of caramel.</p>
+                <a class="ourbeers__content-button" href="#">Details</a>
+        </div>
+
+        <div class="ourbeers__content-img">
+            <img src="assets/img/red.png" alt="">
+        </div>
+    </div>
+
+    <div class="ourbeers__container-box ipa">
+        <div class="ourbeers__content">
+            <h2 class="ourbeers__content-title big">Ipa</h2>
+            <p class="ourbeers__content-subtitle nohover">Valhalla Spring</p>
+            <p class="ourbeers__content-description nohover">Slightly misty, like the Spring fog, with a hint of a passionate
+                 character. Its a full-bodied ale with a dazzling palette, like sunbeams breaking through the clouds.</p>
+                 <a class="ourbeers__content-button" href="#">Details</a>
+        </div>
+
+        <div class="ourbeers__content-img">
+            <img src="assets/img/ipa.png" alt="">
+        </div>
+    </div>
+
+    <div class="ourbeers__container-box stout">
+        <div class="ourbeers__content">
+            <h2 class="ourbeers__content-title big">Stout Ale</h2>
+            <p class="ourbeers__content-subtitle nohover">Black Raven</p>
+            <p class="ourbeers__content-description nohover">Just like Flókis ravens, Stout Ale is pitch black. With its reminisces 
+                of cocoa and coffee in the flavour and a smoothly roasted aftertaste, it is a pioneer.</p>
+                <a class="ourbeers__content-button" href="#">Details</a>
+        </div>
+
+        <div class="ourbeers__content-img">
+            <img src="assets/img/stout.png" alt="">
+        </div>
+    </div>
+</div>
+
+<section data-scroll-section onmouseenter="cambioMouse()" class="ourhistory">
+    <div data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="18" class="ourhistory__textanim">BREWED IN THE OLD-SCHOOL TRADITION OF <b>CRAFTMANSHIP.</b></div>
+
+    <div class="ourhistory__container">
+        <div class="ourhistory__container-img">
+            <div data-scroll-class="showtitulo" data-scroll data-scroll-repeat="true" data-scroll data-scroll-speed=".5" class="ourhistory__container-img-title"><h2>Smoothly Roasted After-Taste</h2></div>
+            <div class="ourhistory__container-img-logo"><img src="assets/img/logo.png"></div>
+            <div data-scroll data-scroll-speed="-2" class="ourhistory__container-img-beer"><img src="assets/img/stout_grande.png"></div>
+        </div>
+
+        <div data-scroll data-scroll-speed="3" class="ourhistory__container-content">
+            <div class="ourhistory__container-content-title"><h2>Our <b style="color:#EC1C24">Family</b> To Yours</h2></div>
+            <div class="ourhistory__container-content-description">Beer crafted from the water flows from rain and prehistoric 
+                glaciers down the Hlíoarfjall Mountain and through ancient lava fields, delivering the purest water on Earth, 
+                and the perfect foundation for brewing deliciously refreshing craft ales.</div>
+                <div class="ourhistory__container-content-button"><a class="button" href="#">Our History</a></div>
+        </div>
+
+    </div>
+    
+</section>
+
+<section data-scroll-section onmouseenter="cambioMouse()" class="blog">
+    <div data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="40" class="blog__title1">WELCOME TO THE WARRIORS BREWERY</div>
+    <div data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="-40" class="blog__title2">TAKE YOUR REFRESHING PREMIUM BEER</div>
+    <div data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="40" class="blog__title3">BREWED IN THE OLD-SCHOOL TRADITION</div>
+
+    <div class="blog__container">
+        <div class="blog__container-img"><img src="assets/img/img_blog.png"></div>
+        <div class="blog__container-content">
+            <h2 class="blog__container-content-title">Come say <b style="color:#EC1C24">Skoll</b></h2>
+            <p class="blog__container-content-description">The original Skoll Brewery is still alive and well! There are two taproom 
+                locations. The original brewpub right next to our brewery, and another on the island. Youll find plenty of food, fresh 
+                Skoll beer and warrior spirit.</p>
+            <div class="blog__container-content-button"><a class="button" href="#">Read More</a></div>
+        </div>
+    </div>
+
+
+</section>
+
+<section data-scroll-section class="reviews">
+
+    <div class="reviews__container">
+        <div class="reviews__container-text">
+            <p class="reviews__container-text-p">“Beer crafted from the water flows from rain and prehistoric glaciers down the
+                 Hlíoarfjall Mountain and through ancient lava fields, delivering the purest water on Earth, and the perfect
+                  foundation for brewing deliciously refreshing craft ales.Beer crafted from the water flows from rain and prehistoric
+                   glaciers down the Hlíoarfjall Mountain and through ancient lava.
+                -Lorem Ipsum Name</p>
+
+                <ul class="reviews__container-text-stars">
+                    <li class="reviews__container-text-stars-item"><img class="reviews__container-text-stars-item-svg" src="assets/img/star.svg" alt=""></li>
+                    <li class="reviews__container-text-stars-item"><img class="reviews__container-text-stars-item-svg" src="assets/img/star.svg" alt=""></li>
+                    <li class="reviews__container-text-stars-item"><img class="reviews__container-text-stars-item-svg" src="assets/img/star.svg" alt=""></li>
+                    <li class="reviews__container-text-stars-item"><img class="reviews__container-text-stars-item-svg" src="assets/img/star.svg" alt=""></li>
+                    <li class="reviews__container-text-stars-item"><img class="reviews__container-text-stars-item-svg" src="assets/img/star.svg" alt=""></li>
+
+                </ul>
+                <button class="button reviews__container-text-button">See All Reviews</button>
+         </div>
+
+         <div class="reviews__container-image">
+             <h2 class="reviews__container-image-title">“AS NATURE WOULD HAVE IT”</h2>
+             <img src="assets/img/logo_beer.png" alt="" class="reviews__container-image-logo">
+             <img src="assets/img/beer_review.png" alt="" class="reviews__container-image-img">
+         </div>
+     </div>
+
+</section>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+<script src="js/javascript.js"></script>
+</body>
+
+
+</html>

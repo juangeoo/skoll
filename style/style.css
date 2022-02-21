@@ -1,0 +1,882 @@
+@font-face {
+  font-family: 'Awakenning';
+  /*a name to be used later*/
+  src: url("../assets/fonts/Pirate Scroll.otf");
+  /*URL to font*/
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Reenie';
+  /*a name to be used later*/
+  src: url("../assets/fonts/ReenieBeanie-Regular.ttf");
+  /*URL to font*/
+}
+
+@font-face {
+  font-family: 'Rhodium';
+  /*a name to be used later*/
+  src: url("../assets/fonts/RhodiumLibre-Regular.ttf");
+  /*URL to font*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  cursor: none;
+}
+
+a {
+  text-decoration: none;
+  color:white;
+
+}
+
+html {
+  overflow-x: hidden;
+  background-color: black;
+}
+
+.anchor {
+  display: block;
+  height: 30vh;
+  margin-top: -30vh;
+  visibility: hidden;
+}
+
+.cursor {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #EC1C24;
+  border-radius: 50%;
+  position: absolute;
+  font-family: "Reenie";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  color: #EC1C24;
+  font-size: 36px;
+  text-transform: uppercase;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  cursor: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: 99;
+}
+
+.mousechange {
+  color: transparent;
+  border: 15px solid #EC1C24;
+  -webkit-transform: scale(0.15);
+          transform: scale(0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+a:hover.mousechange {
+  width: scale(0.3);
+}
+
+.hero__container {
+  height: 100vh;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: none;
+  z-index: -3;
+}
+
+.hero__container-video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+.hero__container-content {
+  margin-left: 8.33%;
+  margin-right: 8.33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50vh;
+}
+
+.hero__container-content-title {
+  font-family: "Awakenning";
+  font-size: 8vw;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 9.5vw;
+}
+
+.hero__container-content-p {
+  width: 50%;
+  font-family: "Reenie";
+  font-size: 25px;
+  text-align: right;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.blonde {
+  background-image: url("../assets/img/fondo_blonde.png");
+  background-size: cover;
+  background-position: center;
+  font-family: "Awakenning";
+  font-size: 60px;
+  color: #EBB418;
+}
+
+.red {
+  background-image: url("../assets/img/fondo_red.png");
+  font-family: "Awakenning";
+  background-size: cover;
+  background-position: center;
+  font-size: 60px;
+  color: #EC1C24;
+}
+
+.ipa {
+  background-image: url("../assets/img/fondo_ipa.png");
+  font-family: "Awakenning";
+  font-size: 60px;
+  background-size: cover;
+  background-position: center;
+  color: #32a562;
+}
+
+.stout {
+  background-image: url("../assets/img/fondo_stout.png");
+  font-family: "Awakenning";
+  font-size: 60px;
+  background-size: cover;
+  background-position: center;
+  color: #c9c9c9;
+}
+
+.ourbeers__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0px;
+  scroll-behavior: smooth;
+}
+
+.ourbeers__container-box {
+  width: 25vw;
+  max-width: 50%;
+  height: 360px;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: 0%;
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  min-width: 25vh;
+}
+
+.ourbeers__container-box:hover {
+  width: 40%;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+.ourbeers__container-box:hover .ourbeers__content-img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
+}
+
+.ourbeers__container-box:hover .ourbeers__content-title {
+  font-size: 32px;
+  -webkit-transition: font-size .5s;
+  transition: font-size .5s;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.ourbeers__container-box:hover .ourbeers__content-subtitle {
+  opacity: 100;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.ourbeers__container-box:hover .ourbeers__content-description {
+  opacity: 100;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.ourbeers__container-box:hover .ourbeers__content-button {
+  opacity: 100;
+}
+
+.ourbeers__container-box:not(:hover) {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.ourbeers__content {
+  position: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+}
+
+.ourbeers__content-title {
+  font-family: "Awakenning";
+  font-size: 60px;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.ourbeers__content-subtitle {
+  font-family: "Reenie";
+  font-size: 28px;
+  text-transform: uppercase;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.ourbeers__content-description {
+  padding-top: 20px;
+  color: #fff;
+  opacity: 0;
+  font-family: "Rhodium";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 18px;
+  max-width: 300px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.ourbeers__content-button {
+  font-family: "Reenie";
+  color: #fff;
+  opacity: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.ourbeers__content-button:hover {
+  color: #cccccc;
+}
+
+.ourbeers__content-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40%;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.ourhistory {
+  height: 120vh;
+  z-index: 99;
+  background-image: url("../assets/img/fondo_ourhistory.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(5, 83, 131, 0))), url("../assets/img/fondo_ourhistory.png");
+  background: linear-gradient(0deg, black 0%, rgba(5, 83, 131, 0) 100%), url("../assets/img/fondo_ourhistory.png");
+  background-size: cover;
+}
+
+.ourhistory__textanim {
+  color: #fff;
+  font-size: 4vw;
+  font-family: "Rhodium";
+  text-transform: uppercase;
+  width: 200%;
+}
+
+.show {
+  -webkit-transition: 3s;
+  transition: 3s;
+  margin-left: -50%;
+}
+
+.showtitulo {
+  -webkit-filter: blur(0) !important;
+          filter: blur(0) !important;
+}
+
+.showizq {
+  opacity: 100%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+
+.button {
+  font-family: "Reenie";
+  color: #fff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.button:hover {
+  color: #cccccc;
+}
+
+.ourhistory__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: 8.33%;
+  margin-right: 8.33%;
+  color: white;
+  gap: 25px;
+  margin-top: 100px;
+}
+
+.ourhistory__container-img {
+  width: 50%;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 40px;
+  height: 700px;
+}
+
+.ourhistory__container-img-title {
+  font-family: "Awakenning";
+  font-size: 5vw;
+  line-height: 6.5vw;
+  position: absolute;
+  width: 30%;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  -webkit-transition: -webkit-filter 2s;
+  transition: -webkit-filter 2s;
+  transition: filter 2s;
+  transition: filter 2s, -webkit-filter 2s;
+}
+
+.ourhistory__container-img-logo {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.ourhistory__container-img-beer {
+  position: relative;
+  z-index: 2;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  margin-right: 40px;
+  -webkit-transition: -webkit-filter 1s;
+  transition: -webkit-filter 1s;
+  transition: filter 1s;
+  transition: filter 1s, -webkit-filter 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+}
+
+.ourhistory__container-img-beer img {
+  width: auto;
+  height: auto;
+}
+
+.ourhistory__container-img-beer:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transition: -webkit-filter 1s;
+  transition: -webkit-filter 1s;
+  transition: filter 1s;
+  transition: filter 1s, -webkit-filter 1s;
+}
+
+.ourhistory__container-content {
+  width: 50%;
+  text-align: right;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.ourhistory__container-content-title {
+  font-family: "Awakenning";
+  font-size: 4vw;
+  line-height: 5.5vw;
+}
+
+.ourhistory__container-content-description {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "Reenie";
+  font-size: 25px;
+}
+
+.blog {
+  color: #fff;
+  height: 100vh;
+}
+
+.blog__title1 {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #1e1e1e;
+  font-family: "Awakenning";
+  font-size: 8vw;
+  position: absolute;
+  width: 150%;
+  z-index: 2;
+  padding: 25px;
+}
+
+.blog__title2 {
+  color: black;
+  background-color: #1e1e1e;
+  font-family: "Rhodium";
+  font-size: 8vw;
+  position: absolute;
+  width: 200%;
+  margin-left: -50%;
+  margin-top: 35vh;
+  z-index: -1;
+}
+
+.blog__title3 {
+  color: black;
+  background-color: #1e1e1e;
+  font-family: "Rhodium";
+  font-size: 8vw;
+  position: absolute;
+  width: 200%;
+  margin-left: -50%;
+  margin-top: 60vh;
+  z-index: -1;
+}
+
+.blog__container {
+  height: 100vh;
+  margin-top: 10%;
+  margin-left: 8.33%;
+  margin-right: 8.33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blog__container-img {
+  width: 50%;
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
+  -webkit-transition: -webkit-filter 1s;
+  transition: -webkit-filter 1s;
+  transition: filter 1s;
+  transition: filter 1s, -webkit-filter 1s;
+  position: relative;
+}
+
+.blog__container-img:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transition: -webkit-filter 1s;
+  transition: -webkit-filter 1s;
+  transition: filter 1s;
+  transition: filter 1s, -webkit-filter 1s;
+}
+
+.blog__container-content {
+  width: 50%;
+  z-index: 3;
+}
+
+.blog__container-content-title {
+  font-family: "Awakenning";
+  font-size: 8vw;
+  line-height: 7.5vw;
+}
+
+.blog__container-content-description {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "Reenie";
+  font-size: 25px;
+}
+
+.reviews {
+  height: 100vh;
+  color: #fff;
+  background-image: url("../assets/img/fondo_reviews.png");
+  background-size: cover;
+  margin-top: 10%;
+}
+
+.reviews__container {
+  margin-left: 8.33%;
+  margin-right: 8.33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 60px;
+}
+
+.reviews__container-text {
+  width: 25%;
+}
+
+.reviews__container-text-p {
+  margin-bottom: 30px;
+  font-family: "Reenie";
+  font-size: 25px;
+  line-height: 47px;
+}
+
+.reviews__container-text-stars {
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+.reviews__container-text-stars-item {
+  display: inline-block;
+  margin-right: -20px;
+}
+
+.reviews__container-text-stars-item-svg {
+  width: 85%;
+}
+
+.reviews__container-text-button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.reviews__container-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.reviews__container-image-title {
+  font-family: "Awakenning";
+  font-size: 9vw;
+  line-height: 7.5vw;
+  position: absolute;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 50%;
+  color: #EC1C24;
+  z-index: -1;
+}
+
+.reviews__container-image-img {
+  width: 60%;
+  margin-top: 5%;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  position: fixed;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 101;
+  margin-top: 30px;
+}
+
+.navbar__ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem;
+}
+
+.navbar__li {
+  color: white;
+  font-family: 'Rhodium';
+  text-decoration: none;
+  padding-left: 30px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1366px) {
+  .blog__container {
+    margin-top: 35%;
+  }
+  .blog__title1 {
+    margin-top: -100px;
+  }
+  .blog__container-img img {
+    width: 120%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hero__container-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hero__container-content-title {
+    text-align: left;
+    font-size: 11vw;
+  }
+  .hero__container-content-p {
+    text-align: left;
+    width: 100%;
+    font-size: 32px;
+    margin-top: 30px;
+  }
+  .cursor {
+    display: none;
+  }
+  .ourhistory__textanim {
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  .ourbeers__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 100%;
+  }
+  .ourbeers__container-box {
+    width: 100%;
+    max-width: 100%;
+  }
+  .ourbeers__container-box:hover {
+    width: 100%;
+  }
+  .ourbeers__container-box:hover .ourbeers__content-title {
+    font-size: 64px;
+    -webkit-transition: font-size .5s;
+    transition: font-size .5s;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  .ourbeers__container-box:hover .ourbeers__content-subtitle {
+    opacity: 100;
+    font-size: 44px;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+  }
+  .ourbeers__container-box:hover .ourbeers__content-description {
+    opacity: 100;
+    font-size: 18px;
+    min-width: 100%;
+    line-height: 35px;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+  }
+  .ourbeers__container-box:hover .ourbeers__content-button {
+    opacity: 100;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .ourbeers__content-img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .ourbeers__container-box {
+    width: 100%;
+    max-width: 100%;
+    height: 80vh;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .ourbeers__container-box:hover .ourbeers__content-img {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+
+  .navbar__ul .navbar__li{
+    display:none;
+}
+
+.ourhistory__container-img{
+  position:absolute;
+  transform:scale(.7);
+  margin-left:-200px;
+}
+
+.ourhistory__container-content{
+  width:100%;
+}
+.ourhistory__container-img-title{
+  display:none;
+}
+
+.blog__container-img{
+  transform:scale(.3);
+  
+}
+
+.reviews__container{
+  width:100%;
+  margin:0;
+}
+
+.reviews__container-text-p{
+  width:100%;
+  margin-left:100px;
+}
+}
+
+@media screen and (max-width: 375px) {
+  .hero__container-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hero__container-content-title {
+    text-align: left;
+    font-size: 14vw;
+    line-height: 16vw;
+  }
+  .hero__container-content-p {
+    text-align: left;
+    width: 100%;
+    font-size: 28px;
+    margin-top: 30px;
+  }
+
+  .navbar__ul .navbar__li{
+    display:none;
+}
+}
+/*# sourceMappingURL=style.css.map */
